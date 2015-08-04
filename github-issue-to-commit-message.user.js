@@ -25,7 +25,8 @@
   var text = document.createTextNode("Copy commit message");
 
   btn.appendChild(text);
-  btn.className = "button minibutton";
+  btn.className = "btn btn-sm";
+  btn.style["margin-right"] = "6px";
   btn.href = "#";
   btn.addEventListener('click', function(){
     var issueTitle = document.getElementsByClassName("js-issue-title")[0].innerText;
@@ -37,7 +38,6 @@
     copyToClipboard(commitMessage)
     return false;
   });
-  btn.style["margin-right"] = "10px";
 
   target.insertBefore(btn, target.childNodes[0]);
 })();// ==/UserScript==
